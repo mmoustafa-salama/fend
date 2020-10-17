@@ -88,6 +88,16 @@ section {
     transition: ease 0.3s all;
 }
 
+.navbar__menu .menu__link_active {
+    display: block;
+    padding: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+
+    background-color: rgba(0,13,60,1);
+}
+
 /* Header Styles */
 .page__header {
     background: #fff;
@@ -192,18 +202,18 @@ section:nth-of-type(3n + 1) .landing__container::after {
 
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
-/* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
-section.your-active-class {
+/* Note: section__active class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
+section.section__active {
     background: rgb(0, 0, 0);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
-section.your-active-class .landing__container::before {
+section.section__active .landing__container::before {
     opacity: 1;
     animation: rotate 4s linear 0s infinite forwards;
 }
 
-section.your-active-class .landing__container::after {
+section.section__active .landing__container::after {
     opacity: 1;
     animation: rotate 5s linear 0s infinite forwards reverse;
 }

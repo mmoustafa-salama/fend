@@ -27,7 +27,7 @@ function generateEventHandler() {
 
 async function getWeatherData(zipCode) {
     if (!zipCode) zipCode = '94040'; // Set default value to USA
-    const apiUrl = `${baseUrl}?zip=${zipCode}&appid=${apiKey}`;
+    const apiUrl = `${baseUrl}?zip=${zipCode}&appid=${apiKey}&units=metric`;
     const res = await fetch(apiUrl);
     try {
         const data = await res.json();

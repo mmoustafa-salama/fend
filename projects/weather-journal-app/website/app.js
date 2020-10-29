@@ -56,9 +56,9 @@ async function loadWeatherData() {
     try {
         const projectData = await res.json();
         if (projectData) {
-            document.getElementById('date').innerText = projectData.date;
-            document.getElementById('temp').innerText = projectData.temperature;
-            document.getElementById('content').innerText = projectData.user_response;
+            document.getElementById('date').innerHTML = projectData.date;
+            document.getElementById('temp').innerHTML = projectData.temperature;
+            document.getElementById('content').innerHTML = projectData.user_response;
         }
     } catch (error) {
         console.error('Error loading weather data: ' + error.message);
